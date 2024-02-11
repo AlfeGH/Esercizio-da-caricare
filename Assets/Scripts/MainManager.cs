@@ -10,6 +10,7 @@ public class MainManager : MonoBehaviour
     public int LineCount = 6;
     public Rigidbody Ball;
 
+    public static int scoreGlobal;
     public Text ScoreText;
     public GameObject GameOverText;
     
@@ -64,6 +65,7 @@ public class MainManager : MonoBehaviour
 
     void AddPoint(int point)
     {
+        scoreGlobal += point;
         m_Points += point;
         ScoreText.text = $"Score : {m_Points}";
     }
@@ -72,5 +74,9 @@ public class MainManager : MonoBehaviour
     {
         m_GameOver = true;
         GameOverText.SetActive(true);
+        if (ScoreManager.scoreToWrite < scoreGlobal)
+        {
+            ScoreManager.instance.SaveHiScore();
+        }
     }
 }
