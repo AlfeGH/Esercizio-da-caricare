@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InputPlayerName : MonoBehaviour
+public class InputRecord : MonoBehaviour
 {
-    private Text playerNameLocal;
+    private Text text;
 
     // Start is called before the first frame update
     void Start()
     {
-        ScoreManager.instance.LoadHiScore();
-        playerNameLocal = GetComponent<Text>();
-        playerNameLocal.text = "Player:\n" + ScoreManager.instance.playerName;
+        text = GetComponent<Text>();
+        text.text = "High Score: " + ScoreManager.nameToWrite + ": " + ScoreManager.scoreToWrite;
     }
 
     // Update is called once per frame

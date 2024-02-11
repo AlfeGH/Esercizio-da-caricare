@@ -901,6 +901,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d52f9e4c19c1c4895d440a1521b8a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: 
+  hiScoreText: {fileID: 1215855207}
   casella: {fileID: 227865106}
 --- !u!1 &863927178
 GameObject:
@@ -1084,7 +1086,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000011444, y: 72.785}
-  m_SizeDelta: {x: 390.6667, y: 45.5704}
+  m_SizeDelta: {x: 712.1121, y: 45.5704}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215855207
 MonoBehaviour:
